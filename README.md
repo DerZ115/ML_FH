@@ -20,3 +20,4 @@
 
 * da fehlt eigentlich noch (fast) alles
 * David: ich habe mal versucht die grid search in KNN zu implementieren aber ich denke da passt noch was nicht ;-)
+* was noch fehlt ist der Punkt: Investigating additional classification methods
