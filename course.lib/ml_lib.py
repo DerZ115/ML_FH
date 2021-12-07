@@ -228,7 +228,7 @@ def lbl2oneofc(targets):
         targs[idone, i]=np.ones((idone.shape[0], 1))
     return targs
 
-def wrap_kmeans(data, mink, maxk, nrep=20, njobs=5, init='random', maxit=100, verbose=False):
+def wrap_kmeans(data, mink, maxk, nrep=20, init='random', maxit=100, verbose=False):
     # wrap_kmeans(data, mink, maxk, nrep=20, maxit=100):
     # wrapper around sklearn.cluster.KMeans algorithm that provides a 
     # quick and dirty way of infering the optimal number 
@@ -279,7 +279,7 @@ def wrap_kmeans(data, mink, maxk, nrep=20, njobs=5, init='random', maxit=100, ve
             print('Doing:', k, 'kernels.')
         # get clustering results for nrep reinitialisations running
         # njobs in parallel res contains the best fit.
-        res=clust.KMeans(n_clusters=k, init=init, n_init=nrep,  max_iter=maxit, tol=0.000001, n_jobs=njobs).fit(data)
+        res=clust.KMeans(n_clusters=k, init=init, n_init=nrep,  max_iter=maxit, tol=0.000001).fit(data)
         centers=res.labels_
         # calculate silhouette score and append it to the vector
         shlts.append(metrics.silhouette_score(data, centers))
