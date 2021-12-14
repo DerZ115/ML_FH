@@ -6,3 +6,4 @@ This repo contains the bootcamps exercises for the course Machine Learning. The 
 * folder `notebooks` contains the notebook for regression (linear models), classification and clustering 
 * folder `course.lib` contains additional .py helper files and funcitons for executing the notebooks
 
+Nadine Grundschober, David Lilek, Michael Wenth, Daniel Zimmermann
